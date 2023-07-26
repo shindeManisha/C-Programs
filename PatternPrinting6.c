@@ -1,0 +1,54 @@
+/*
+Enter number of rows :
+6
+Enter number of columns :
+6
+A       B       C       D       E       F
+a        b        c        d        e       f
+A       B       C       D       E       F
+a        b        c        d       e       f
+A       B       C       D       E       F
+a        b        c       d        e       f
+*/
+
+#include<stdio.h>
+
+void Pattern(int iRow,int iCol)
+{
+  int i=0,j=0;
+  char ch='A';
+ 
+   for(i=1;i<=iRow;i++)
+  {
+    for(j=1,ch='A';j<=iCol;j++,ch++)
+    {
+        if((i%2)==0)
+        {
+        printf("%c\t",ch+32);
+        
+    }
+    else
+    {
+        printf("%c\t",ch);
+        
+    }
+    
+  }
+  printf("\n");
+
+}
+}
+int main()
+{
+    int iValue1 = 0, iValue2 = 0;
+
+    printf("Enter number of rows : \n");
+    scanf("%d",&iValue1);
+
+    printf("Enter number of columns : \n");
+    scanf("%d",&iValue2);
+
+    Pattern(iValue1, iValue2);
+
+    return 0;
+}
